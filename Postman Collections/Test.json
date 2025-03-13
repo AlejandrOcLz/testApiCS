@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "81f77d09-ee2d-445f-98f6-c3166a2e359c",
+		"name": "Imedical test",
+		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta",
+			"id": "5b8a946d-d21d-4430-a9fc-1abe74ca7566",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost:5171/usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Usuario",
+			"id": "ff9fe2f3-b7e0-437e-86e2-ad23bed019d5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost:5171/usuarios/8"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta 401",
+			"id": "ea883574-8ceb-4e73-826a-56eedfce9880",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Invalid",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost:5171/usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "registrar",
+			"id": "548292f6-892c-4c25-8abb-9f5caf2f441a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Alguien\",\r\n    \"Email\": \"Cualquiera@gmail.com\",\r\n    \"Edad\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5171/usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "registrar 400",
+			"id": "ffc32816-8ca7-435f-93d6-87fb04bc25d8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Luis\",\r\n    \"Email\": \"Lucho@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5171/usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"id": "00e712ec-fbb8-4f52-8d9d-efd4e4166a0d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Carlos Gomez\",\r\n    \"Email\": \"Lucho12@gmail.com\",\r\n    \"Edad\": 26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5171/usuarios/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Bad",
+			"id": "fffc51fc-dab1-4a7f-ac5c-fab2648a1d37",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"Luis\",\r\n    \"Email\": \"Lucho12@gmail.com\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5171/usuarios/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"id": "62fb7238-8592-47e5-a9a5-3177463b3801",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5171/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar",
+			"id": "6b7b0ebc-be2a-42f9-b790-ba68cb8be37f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwibmJmIjoxNzQxODUxNDA5LCJleHAiOjE3NDIyMTE0MDksImlhdCI6MTc0MTg1MTQwOSwiaXNzIjoiaW1lZGljYWwuY29tIiwiYXVkIjoiaW1lZGljYWwuY29tIn0.hTy4uiO2lUSGq4D77ss8q5s3UNvkhe7QsLfLljwkGqo",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:5171/usuarios/8"
+			},
+			"response": []
+		}
+	]
+}
