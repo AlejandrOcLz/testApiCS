@@ -3,7 +3,7 @@
 API desarrollada en .NET 8.0 para la gestión de usuarios, utilizando autenticación JWT y conexión a una base de datos Azure SQL.
 
 🚀 Tecnologías Utilizadas
-
+--------------------------
 .NET Core 8.0.407
 
 Entity Framework Core (EF Core) para la gestión de la base de datos
@@ -15,7 +15,7 @@ JWT (JSON Web Token) para autenticación segura
 ASP.NET Core Web API para la creación de servicios RESTful
 
 📦 Dependencias y Librerías
-
+----------------------------
 Instalar las siguientes dependencias antes de ejecutar el proyecto:
 
 # Entity Framework Core para SQL Server
@@ -31,7 +31,7 @@ Instalar las siguientes dependencias antes de ejecutar el proyecto:
  dotnet add package Microsoft.AspNetCore.Mvc.Core
 
 🔧 Configuración del Proyecto
-
+------------------------------
 Configurar la conexión a la base de datos
 
 # Editar appsettings.json y agregar la cadena de conexión a Azure SQL:
@@ -43,50 +43,56 @@ Configurar la conexión a la base de datos
 dotnet run
 
 🔑 Autenticación
-
+--------------------------
 La API utiliza JWT para la autenticación. Para acceder a los endpoints protegidos, se debe incluir el token en la cabecera de las solicitudes:
 
 Authorization: Bearer <TOKEN>
 
 📌 Endpoints Disponibles
+--------------------------
 
 📝 Usuarios
 --------------------------
 POST
-
+--------------------------
 /usuarios
 
 Crea un nuevo usuario
+
 ---------------------------
 GET
-
+--------------------------
 /usuarios/{id}
 
 Obtiene un usuario por ID
+
 --------------------------
 PUT
-
+--------------------------
 /usuarios/{id}
 
 Actualiza un usuario (nombre, email o edad)
+
 --------------------------
 DELETE
-
+--------------------------
 /usuarios/{id}
 
 Elimina un usuario
+
 --------------------------
 GET
-
+--------------------------
 /usuarios
 
 Obtiene la lista de usuarios (requiere autenticación)
+
 --------------------------
 
 🔐 Autenticación
 --------------------------
 POST
-
+--------------------------
 /login
 
 Iniciar sesión y obtener un token JWT
